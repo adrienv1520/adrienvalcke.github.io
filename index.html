@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- DESCRIPTION -->
+    <meta name="description" content="adrien valcke's projects website">
+    <meta name="author" content="adrien valcke">
+
+    <!-- FAVICON : 16x16 32x32 48x48 -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--[if le IE 11]>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <![endif]-->
+
+    <title>adrien valcke</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+
+    <!-- WRAPPER -->
+    <div class="wrapper">
+
+      <!-- HEADER -->
+      <header id="about" class="row content-between wrap fluid">
+        <div id="portrait" class="row items-center wrap">
+          <p id="photo"><img src="img/adrienvalcke.png" alt="adrien valcke"></p>
+          <div class="col items-center">
+            <p id="name">adrien valcke</p>
+            <p id="job">developer</p>
+          </div>
+        </div>
+
+        <div id="contact" class="row items-center">
+          <p id="github"><a href="https://github.com/adrienvalcke" target="_blank" data-tooltip="GitHub"><img src="img/github.png" alt="github"></a></p>
+          <p id="npm"><a href="https://www.npmjs.com/~adrienvalcke" target="_blank" data-tooltip="npm"><img src="img/npm.png" alt="npm"></a></p>
+          <p id="linkedin"><a href="https://www.linkedin.com/in/adrien-valcke-a7212010b" target="_blank" data-tooltip="LinkedIn"><img src="img/linkedin.png" alt="linkedin"></a></p>
+          <p id="email"><a href="mailto:adrienvalcke@icloud.com" data-tooltip="adrienvalcke@icloud.com"><img src="img/email.png" alt="email"></a></p>
+          <p id="phone"><a href="#" data-tooltip="0652079626"><img src="img/phone.png" alt="phone"></a></p>
+        </div>
+      </header>
+
+      <div id="resume" class="hide">
+        <p>Self-educated developer most of the time, I am passionate about the world of programming. Web, mobile, games, IoT, Big Data are fields that interest me a lot.</p>
+        <p>I love learning languages like Bash, C/C++, Java, SQL, JavaScript (ES6/7, Node, asm.js), HTML/CSS and keeping an eye on new languages like Elixir and Rust.</p>
+        <p>I'm not only a developer, I like designing apps that to me is fundamentally linked to code and focusing on DevOps side to understand how it all works.</p>
+        <p>At now I really want to go deep with JavaScript and a functional language like Elixir although I have a good background with Java and C/C++. In the long-term I would see myself as a technical architect.</p>
+        <p>My main concerns are performance, security, maintainability and scalability of my code through best practices, personal improvement and technology watch.</p>
+      </div>
+
+      <!-- MAIN -->
+      <main id="projects" class="row content-around wrap">
+        <div id="denvar" class="project col">
+          <p class="platform"><img src="img/nodejs.png" alt="node.js"></p>
+          <p class="project_name"><a href="https://github.com/adrienvalcke/denvar" target="_blank"><img src="img/denvar.png" alt="denvar"></a></p>
+          <p class="project_mission">A Node.js module and command line tool to load variables from different environments and export production configuration to Heroku.</p>
+        </div>
+        <div id="express_hero" class="project col">
+          <p class="platform"><img src="img/nodejs.png" alt="node.js"></p>
+          <p class="project_name"><a href="https://github.com/adrienvalcke/express-hero" target="_blank"><img src="img/mountain.png" alt="express hero"></a></p>
+          <p class="project_mission">A Node.js full stack prototype to start a new Node.js API RESTful faster. Node and Express best practices, security and DevOps (CI, CD) concerns.</p>
+        </div>
+        <div id="crypte" class="project col">
+          <p class="platform"><img src="img/nodejs.png" alt="node.js"></p>
+          <p class="project_name"><a href="https://github.com/adrienvalcke/crypte" target="_blank"><img src="img/crypte.png" alt="crypte"></a></p>
+          <p class="project_mission col content-center">A Node.js module and command line tool to crypt password in AES-256 GCM and generate keys.</p>
+        </div>
+        <div id="npmindustry" class="project col">
+          <p class="platform"><img src="img/nodejs.png" alt="node.js"></p>
+          <p class="project_name"><a href="https://github.com/adrienvalcke/npm-industry" target="_blank"><img src="img/npmindustry.png" alt="npm-industry"></a></p>
+          <p class="project_mission">Continuous integration and delivery using npm as build tool and browserify. Live reload and HMR supported. Only one file configuration : package.json. This version builds JavaScript with Browserify and Babel (ES6/7), CSS with Stylus and autoprefixer, HTML with Pug. Tests are run through Mocha with eslint (airbnb configuration). Deployments are made for Git, Heroku and Amazon S3.</p>
+        </div>
+        <div id="existfs" class="project col">
+          <p class="platform"><img src="img/nodejs.png" alt="node.js"></p>
+          <p class="project_name"><a href="https://github.com/adrienvalcke/exist-fs" target="_blank"><img src="img/existfs.png" alt="exist-fs"></a></p>
+          <p class="project_mission">A synchronous version Node.js module to verify if a path exists, is a file or a directory since depecrated the existsSync from fs middleware is.</p>
+        </div>
+        <div id="captainreload" class="project col">
+          <p class="platform"><img src="img/nodejs.png" alt="node.js"></p>
+          <p class="project_name"><a href="https://github.com/adrienvalcke/captain-reload" target="_blank"><img src="img/captainreload.png" alt="captain-reload"></a></p>
+          <p class="project_mission">A simple Node.js command line tool to inject or extract the live-reload script element depending on production or development need.</p>
+        </div>
+        <div id="vanillejs" class="project col">
+          <p class="platform"><img src="img/js.png" alt="JS"></p>
+          <p class="project_name"><a href="https://github.com/adrienvalcke/vanillejs" target="_blank">VanilleJS</a></p>
+          <p class="project_mission">A native JavaScript library to do Ajax and make it simple when JavaScript can be repetitive and exhaustive.</p>
+        </div>
+        <div id="hoshi" class="project col">
+          <p class="platform"><img src="img/stylus.png" alt="stylus"></p>
+          <p class="project_name"><a href="https://github.com/adrienvalcke/hoshi" target="_blank">Hoshi</a></p>
+          <p class="project_mission">A native CSS library with components and a grid system written with Stylus.</p>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer id="copyright" class="row content-center items-center">
+        <p>Copyright © 2016 Adrien Valcke</p>
+      </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/index.js" charset="utf-8"></script>
+    <script src="//localhost:9091/livereload.js"></script>
+  </body>
+</html>

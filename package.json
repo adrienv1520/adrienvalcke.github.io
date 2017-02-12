@@ -1,0 +1,66 @@
+{
+  "name": "adrienvalcke",
+  "version": "1.0.0",
+  "description": "adrien valcke projects website",
+  "main": "",
+  "author": "Adrien Valcke <adrienvalcke@icloud.com> (https://adrienvalcke.github.io)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrienvalcke/adrienvalcke.github.io.git"
+  },
+  "keywords": [
+    "adrien",
+    "valcke",
+    "developer",
+    "node",
+    "javascript",
+    "projects",
+    "personal",
+    "website"
+  ],
+  "scripts": {
+    "__CLEAN__": "",
+    "clean": "rimraf css/* && rimraf js/*",
+
+    "__PROD_BUILD__": "build for production",
+    "prebuild": "npm run clean -s",
+    "build:scripts": "browserify assets/js/index.js -p [ minifyify --no-map ] -t [ babelify --presets [ es2015 ] ] -o js/index.js",
+    "build:styles": "postcss -u autoprefixer -b 'last 2 versions' -u cssnano -o css/index.css assets/css/index.css",
+    "build": "node captain-reload.js --extract && npm run build:scripts -s && npm run build:styles",
+
+    "__WATCHERS__": "scripts, styles",
+    "prewatch:scripts": "rimraf js/*",
+    "watch:scripts": "watchify assets/js/index.js -p [ minifyify --no-map ] -t [ babelify --presets [ es2015 ] ] -o js/index.js",
+    "prewatch:styles": "rimraf css/*",
+    "watch:styles": "postcss -w -u autoprefixer -b 'last 2 versions' -u cssnano -o css/index.css assets/css/index.css",
+    "watch": "parallelshell \"npm run watch:scripts -s\" \"npm run watch:styles -s\"",
+
+    "__SERVER__": "open site, start server, live-reload",
+    "open:dev": "opener http://127.0.0.1:9090",
+    "serve": "http-server -p 9090 ./",
+    "live-reload": "live-reload --port 9091 ./",
+
+    "__DEV__": "start coding",
+    "dev": "node captain-reload.js --inject && npm run open:dev -s && parallelshell \"npm run live-reload -s\" \"npm run serve -s\" \"npm run watch -s\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "babel-preset-es2015": "^6.14.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "cssnano-cli": "^1.0.4",
+    "http-server": "^0.9.0",
+    "live-reload": "^1.1.0",
+    "minifyify": "^7.3.3",
+    "opener": "^1.4.2",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.8.0",
+    "rimraf": "^2.5.4",
+    "watchify": "^3.7.0"
+  },
+  "preferGlobal": false,
+  "private": true,
+  "analyze": false,
+  "license": "MIT"
+}
