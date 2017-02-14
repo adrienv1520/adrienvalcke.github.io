@@ -36,7 +36,7 @@
     "watch": "parallelshell \"npm run watch:scripts -s\" \"npm run watch:styles -s\"",
 
     "__SERVER__": "open site, start server, live-reload",
-    "open:dev": "opener http://127.0.0.1:9090",
+    "open:dev": "opener http://localhost:9090",
     "serve": "http-server -p 9090 ./",
     "live-reload": "live-reload --port 9091 ./",
 
